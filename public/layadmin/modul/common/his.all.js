@@ -4,6 +4,7 @@ layui.define('jquery', function(exports){
     function His() {}
 
     His.prototype.ajax = function (config) {
+        console.log(config);
         var async = (config.async == null) ? true : config.async;
         var contentType,data;
         if (config.contentType == 'form') {
@@ -11,13 +12,16 @@ layui.define('jquery', function(exports){
             data = config.data;
         } else {
             contentType = "application/json; charset=utf-8";
-            data = JSON.stringify(config.data)
+            data = JSON.stringify(config.data);
         }
+        console.log(config.headers);
         $.ajax({
             url: config.url,
             type: config.type,
+            headers: config.headers,
             dataType: 'json',
             contentType: contentType,
+           // headers: config.headers,
             timeout: 2000,
             async: async,   // 默认同步
             data: data,

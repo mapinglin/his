@@ -7,6 +7,7 @@ use App\Model\Admin;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class Rbac
 {

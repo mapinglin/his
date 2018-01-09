@@ -21,6 +21,33 @@
             <a href="#" class="logo">his-后台管理</a>
             <!-- 显示/隐藏菜单 -->
             <a href="javascript:;" class="hideMenu"><i class="layui-icon">&#xe638;</i></a>
+            <!-- 搜索 -->
+            <div class="layui-form component">
+                <select name="modules" lay-verify="required" lay-search="">
+                    <option value="">直接选择或搜索选择</option>
+                    <option value="1">layer</option>
+                    <option value="2">form</option>
+                    <option value="3">layim</option>
+                    <option value="4">element</option>
+                    <option value="5">laytpl</option>
+                    <option value="6">upload</option>
+                    <option value="7">laydate</option>
+                    <option value="8">laypage</option>
+                    <option value="9">flow</option>
+                    <option value="10">util</option>
+                    <option value="11">code</option>
+                    <option value="12">tree</option>
+                    <option value="13">layedit</option>
+                    <option value="14">nav</option>
+                    <option value="15">tab</option>
+                    <option value="16">table</option>
+                    <option value="17">select</option>
+                    <option value="18">checkbox</option>
+                    <option value="19">switch</option>
+                    <option value="20">radio</option>
+                </select>
+                <i class="layui-icon">&#xe615;</i>
+            </div>
             <!-- 天气信息 -->
             <div class="weather" pc>
                 <div id="tp-weather-widget"></div>
@@ -43,9 +70,18 @@
             </div>
             <!-- 顶部右侧菜单 -->
             <ul class="layui-nav top_menu">
-                {{--<li class="layui-nav-item showNotice" id="showNotice" pc>--}}
-                    {{--<a href="javascript:;"><i class="layui-icon"></i><cite>系统公告</cite></a>--}}
+                <li class="layui-nav-item showNotice" id="showNotice" pc>
+                    <a href="javascript:;"><i class="layui-icon" data-icon="&#xe645;" style="font-size: 20px;">&#xe645;</i><cite>系统公告</cite></a>
+                </li>
+                {{--<li class="layui-nav-item" mobile>--}}
+                    {{--<a href="javascript:;" class="mobileAddTab" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>设置</cite></a>--}}
                 {{--</li>--}}
+                {{--<li class="layui-nav-item" mobile>--}}
+                    {{--<a href="page/login/login.html" class="signOut"><i class="iconfont icon-loginout"></i> 退出</a>--}}
+                {{--</li>--}}
+                <li class="layui-nav-item lockcms" pc>
+                    <a href="javascript:;"><i class="layui-icon" data-icon=""></i><cite>锁屏</cite></a>
+                </li>
                 <li class="layui-nav-item" pc>
                     <a href="javascript:;">
                         <img src="/layadmin/modul/index/face.jpg" class="layui-circle" width="35" height="35">
@@ -97,7 +133,6 @@
 <!-- 移动导航 -->
 <div class="site-tree-mobile layui-hide"><i class="layui-icon">&#xe602;</i></div>
 <div class="site-mobile-shade"></div>
-
 <script type="text/javascript" src="/layadmin/layui/layui.js"></script>
 <script type="text/javascript" src="/layadmin/modul/index/leftNav.js"></script>
 <script type="text/javascript" src="/layadmin/modul/index/index.js"></script>

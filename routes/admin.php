@@ -46,6 +46,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
             Route::put('role/{role_id}/rules', 'RuleController@storeRules');
             //图书管理
             Route::get('books','BookController@index');
+            Route::post('books','BookController@test');
         });
     });
 
